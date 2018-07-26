@@ -11,5 +11,10 @@ drama = Category.create(name: 'Dramas')
 
 Video.create(title: 'Family Guy', description: 'a good video', small_cover_url: 'family_guy.jpg', large_cover_url: 'monk_large.jpg', category: comedy)
 Video.create(title: 'Futurama', description: 'a good video', small_cover_url: 'futurama.jpg', large_cover_url: 'monk_large.jpg', category: comedy)
-Video.create(title: 'Monk', description: 'a good video', small_cover_url: 'monk.jpg', large_cover_url: 'monk_large.jpg', category: comedy)
+monk = Video.create(title: 'Monk', description: 'a good video', small_cover_url: 'monk.jpg', large_cover_url: 'monk_large.jpg', category: comedy)
 Video.create(title: 'South Park', description: 'a good video', small_cover_url: 'south_park.jpg', large_cover_url: 'monk_large.jpg', category: drama)
+
+kevin = User.create(full_name: 'Kevin Wang', password: 'password', email: 'kevin@example.com')
+
+Review.create(user: kevin, video: monk, rating: 5, content: 'this is a good movie')
+Review.create(user: kevin, video: monk, rating: 2,  content: 'this is a ok movie')
